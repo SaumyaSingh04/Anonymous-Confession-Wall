@@ -1,4 +1,4 @@
-const Confession = require('../models/Confession');
+const Confession = require('../models/confession');
 
 exports.getConfessions = async (req, res) => {
   try {
