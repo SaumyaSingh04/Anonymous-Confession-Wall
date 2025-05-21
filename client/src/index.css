@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #dedcdc;
+  }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; }
+  
