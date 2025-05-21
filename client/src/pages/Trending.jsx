@@ -18,10 +18,15 @@ export default function Trending() {
         <p style={styles.empty}>No trending confessions yet. Be the first to post!</p>
       ) : (
         list.map(c => (
-          <ConfessionCard
+           <ConfessionCard
             key={c._id}
             confession={c}
-            onUpdate={() => {}}
+            onUpdate={() => {
+              api
+                .get("/confessions/trending")
+                .then((r) => setList(r.data))
+                .catch((err) => console.error(err));
+            }}
           />
         ))
       )}
